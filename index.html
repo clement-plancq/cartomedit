@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <style>
+        #map { height: 800px; }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        var map = L.map('map').setView([41.131, 19.775], 5);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Paris
+L.marker([48.8546, 2.347]).addTo(map)
+    .bindPopup('<a href="https://cartomedit.hypotheses.org/paris"><img src="./img/Melo.jpg" height="200" width="150"/></a>')
+
+// Marseille
+L.marker([43.2971, 5.3683]).addTo(map)
+    .bindPopup('<a href="https://cartomedit.hypotheses.org/marseille-2"><img src="./img/TotalKheops.jpg" height="200" width="150"/></a><a href="https://cartomedit.hypotheses.org/marseille-2"><img src="./img/Chourmo.jpg" height="200" width="150"/></a><a href="https://cartomedit.hypotheses.org/marseille-2"><img src="./img/Solea.jpg" height="200" width="150"/></a><a href="https://cartomedit.hypotheses.org/marseille-2"><img src="./img/LesMarinsPerdus.jpg" height="200" width="150"/></a><a href="https://cartomedit.hypotheses.org/marseille-2"><img src="./img/LesMarinsPerdusBD.jpg" height="200" width="150"/></a>')
+
+// Barcelone
+L.marker([41.3915, 2.18041]).addTo(map)
+    .bindPopup('<a href="https://cartomedit.hypotheses.org/barcelone-2"><img src="./img/LombreDuVent.jpg" height="200" width="150"/></a>')
+    
+// Cagliari
+L.marker([39.2116, 9.1185]).addTo(map)
+    .bindPopup('<a href="https://cartomedit.hypotheses.org/cagliari"><img src="./img/BellasMariposas.jpg" height="200" width="150"/></a>')
+
+// Oran
+L.marker([35.7027, -0.6386]).addTo(map)
+    .bindPopup('<a href="https://cartomedit.hypotheses.org/oran-2"><img src="./img/LaPeste.jpg" height="200" width="150"/></a>')
+
+// Le Caire
+L.marker([30.0527, 31.2393]).addTo(map)
+    .bindPopup('<a href="https://cartomedit.hypotheses.org/le-caire"><img src="./img/JaiCouruVersLeNil.jpg" height="200" width="150"/></a>')
+
+// Beyrouth
+L.marker([33.8923, 35.4788]).addTo(map)
+    .bindPopup('<a href="https://cartomedit.hypotheses.org/"><img src="" height="200" width="150"/></a>')
+    </script>
+</body>
+
+</html>
